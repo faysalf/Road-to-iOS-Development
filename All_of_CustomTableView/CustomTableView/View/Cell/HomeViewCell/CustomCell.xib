@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="fqf-Da-At6" customClass="CustomCell" customModule="CustomTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fqf-Da-At6" id="Grt-ii-J73">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBi-kL-GJH">
+                        <rect key="frame" x="5" y="5" width="404" height="56"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="rJJ-pl-LGA"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faysalf" translatesAutoresizingMaskIntoConstraints="NO" id="jt4-mU-sPK">
+                        <rect key="frame" x="15" y="12.5" width="41" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41" id="5Wu-VC-hdK"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="Ycm-ej-01R"/>
+                            <constraint firstAttribute="height" constant="41" id="ekG-Q1-WsH"/>
+                            <constraint firstAttribute="width" constant="41" id="nBD-BD-9bO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cH-hO-hVI">
+                        <rect key="frame" x="76" y="20" width="323" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jt4-mU-sPK" firstAttribute="centerY" secondItem="Grt-ii-J73" secondAttribute="centerY" id="GTs-RY-7CE"/>
+                    <constraint firstItem="jt4-mU-sPK" firstAttribute="leading" secondItem="Grt-ii-J73" secondAttribute="leading" constant="15" id="PfT-5I-XfV"/>
+                    <constraint firstAttribute="bottom" secondItem="7cH-hO-hVI" secondAttribute="bottom" constant="20" id="QSH-iv-CPu"/>
+                    <constraint firstItem="qBi-kL-GJH" firstAttribute="leading" secondItem="Grt-ii-J73" secondAttribute="leading" constant="5" id="Uj4-5Z-ose"/>
+                    <constraint firstAttribute="bottom" secondItem="jt4-mU-sPK" secondAttribute="bottom" constant="12.5" id="XvZ-dY-IgB"/>
+                    <constraint firstAttribute="bottom" secondItem="qBi-kL-GJH" secondAttribute="bottom" constant="5" id="a77-QY-Wgx"/>
+                    <constraint firstItem="7cH-hO-hVI" firstAttribute="leading" secondItem="jt4-mU-sPK" secondAttribute="trailing" constant="20" id="emG-CI-zO8"/>
+                    <constraint firstAttribute="trailing" secondItem="qBi-kL-GJH" secondAttribute="trailing" constant="5" id="enm-ZV-shi"/>
+                    <constraint firstItem="qBi-kL-GJH" firstAttribute="top" secondItem="Grt-ii-J73" secondAttribute="top" constant="5" id="fI2-AU-TOq"/>
+                    <constraint firstItem="7cH-hO-hVI" firstAttribute="top" secondItem="Grt-ii-J73" secondAttribute="top" constant="20" id="uyE-t1-gag"/>
+                    <constraint firstItem="jt4-mU-sPK" firstAttribute="top" secondItem="Grt-ii-J73" secondAttribute="top" constant="12.5" id="vMc-pT-DZt"/>
+                    <constraint firstAttribute="trailing" secondItem="7cH-hO-hVI" secondAttribute="trailing" constant="15" id="zto-ry-1cO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="borderView" destination="qBi-kL-GJH" id="NEa-c8-CDp"/>
+                <outlet property="img" destination="jt4-mU-sPK" id="a68-cU-ar8"/>
+                <outlet property="lbl" destination="7cH-hO-hVI" id="0KV-5O-yX0"/>
+            </connections>
+            <point key="canvasLocation" x="-288.40579710144931" y="36.160714285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="faysalf" width="295" height="297"/>
+    </resources>
+</document>
