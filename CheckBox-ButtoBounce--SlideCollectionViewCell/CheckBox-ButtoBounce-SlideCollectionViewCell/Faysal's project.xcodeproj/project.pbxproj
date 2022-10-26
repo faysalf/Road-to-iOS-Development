@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71D0D4012908959B00CA46AE /* CheckBox-ButtoBounce-SlideCollectionViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CheckBox-ButtoBounce-SlideCollectionViewCell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D0D4012908959B00CA46AE /* Faysal's project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faysal's project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D0D4042908959B00CA46AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71D0D4062908959B00CA46AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		71D0D4082908959B00CA46AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +44,10 @@
 		71D0D3F82908959B00CA46AE = {
 			isa = PBXGroup;
 			children = (
-				71D0D4192908995A00CA46AE /* View */,
 				71D0D4182908995300CA46AE /* Model */,
-				71D0D41B2908996600CA46AE /* System */,
+				71D0D4192908995A00CA46AE /* View */,
 				71D0D41A2908996000CA46AE /* Controller */,
+				71D0D41B2908996600CA46AE /* System */,
 				71D0D4032908959B00CA46AE /* Slide-Collection-View */,
 				71D0D4022908959B00CA46AE /* Products */,
 			);
@@ -56,7 +56,7 @@
 		71D0D4022908959B00CA46AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71D0D4012908959B00CA46AE /* CheckBox-ButtoBounce-SlideCollectionViewCell.app */,
+				71D0D4012908959B00CA46AE /* Faysal's project.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71D0D4002908959B00CA46AE /* CheckBox-ButtoBounce-SlideCollectionViewCell */ = {
+		71D0D4002908959B00CA46AE /* Faysal's project */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71D0D4152908959E00CA46AE /* Build configuration list for PBXNativeTarget "CheckBox-ButtoBounce-SlideCollectionViewCell" */;
+			buildConfigurationList = 71D0D4152908959E00CA46AE /* Build configuration list for PBXNativeTarget "Faysal's project" */;
 			buildPhases = (
 				71D0D3FD2908959B00CA46AE /* Sources */,
 				71D0D3FE2908959B00CA46AE /* Frameworks */,
@@ -120,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = "CheckBox-ButtoBounce-SlideCollectionViewCell";
+			name = "Faysal's project";
 			productName = "Slide-Collection-View";
-			productReference = 71D0D4012908959B00CA46AE /* CheckBox-ButtoBounce-SlideCollectionViewCell.app */;
+			productReference = 71D0D4012908959B00CA46AE /* Faysal's project.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +140,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 71D0D3FC2908959B00CA46AE /* Build configuration list for PBXProject "CheckBox-ButtoBounce-SlideCollectionViewCell" */;
+			buildConfigurationList = 71D0D3FC2908959B00CA46AE /* Build configuration list for PBXProject "Faysal's project" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -153,7 +153,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71D0D4002908959B00CA46AE /* CheckBox-ButtoBounce-SlideCollectionViewCell */,
+				71D0D4002908959B00CA46AE /* Faysal's project */,
 			);
 		};
 /* End PBXProject section */
@@ -381,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71D0D3FC2908959B00CA46AE /* Build configuration list for PBXProject "CheckBox-ButtoBounce-SlideCollectionViewCell" */ = {
+		71D0D3FC2908959B00CA46AE /* Build configuration list for PBXProject "Faysal's project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D0D4132908959E00CA46AE /* Debug */,
@@ -390,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71D0D4152908959E00CA46AE /* Build configuration list for PBXNativeTarget "CheckBox-ButtoBounce-SlideCollectionViewCell" */ = {
+		71D0D4152908959E00CA46AE /* Build configuration list for PBXNativeTarget "Faysal's project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D0D4162908959E00CA46AE /* Debug */,

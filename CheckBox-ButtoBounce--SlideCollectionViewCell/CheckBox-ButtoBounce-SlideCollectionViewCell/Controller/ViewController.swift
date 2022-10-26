@@ -22,6 +22,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view4: UIView!
     
+    @IBOutlet weak var lbl11: UILabel!
+    @IBOutlet weak var lbl12: UILabel!
+    @IBOutlet weak var lbl21: UILabel!
+    @IBOutlet weak var lbl22: UILabel!
+    @IBOutlet weak var lbl31: UILabel!
+    @IBOutlet weak var lbl32: UILabel!
+    @IBOutlet weak var lbl41: UILabel!
+    @IBOutlet weak var lbl42: UILabel!
+    
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var smallLabel: UILabel!
     @IBOutlet weak var smallLabel2: UILabel!
@@ -41,21 +50,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUpCollectionView()
         timeToScroll()
-        setupUI()
+        corenerRadius()
     }
     
-    func setupUI(){
+
+    func corenerRadius(){
         let viewArr = [view1, view2, view3, view4, smallLabel, smallLabel2]
         for v in viewArr {
-            if (v==smallLabel || v==smallLabel2) {
-                v?.layer.cornerRadius = 10
-                v?.layer.masksToBounds = true
-            }
-            else {
-                v?.layer.cornerRadius = 15
-            }
+            v?.layer.cornerRadius = 10
+            v?.layer.masksToBounds = true
         }
-        submitButton.layer.cornerRadius = 15
+        submitButton.layer.cornerRadius = 25
         
     }
     
@@ -69,14 +74,14 @@ class ViewController: UIViewController {
     // MARK: submit button bounce
     @IBAction func btnCancel_click(_ sender: Any) {
         submitButton.transform = CGAffineTransform(scaleX: 0.50, y: 0.50)
-        UIView.animate(withDuration: 2.0,
+        UIView.animate(withDuration: 3.0,
                        delay: 0,
-                       usingSpringWithDamping: 0.2,
-                       initialSpringVelocity: 6.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 2.0,
                        options: .allowUserInteraction,
                        animations: { [weak self] in
             self?.submitButton.transform = .identity
-            },
+        },
                        completion: nil)
     }
     
@@ -92,7 +97,6 @@ class ViewController: UIViewController {
             self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
         }
     }
-    
     @objc func changeImage() {
              
          if counter < images.count {
@@ -109,7 +113,7 @@ class ViewController: UIViewController {
            }
       }
     
-    
+    // MARK: Selection button action
     @IBAction func buttonAction(_ sender: UIButton){
         
         let btnTag = sender.tag
@@ -126,24 +130,79 @@ class ViewController: UIViewController {
             img2.tintColor = UIColor.systemGray2
             img3.tintColor = UIColor.systemGray2
             
+            lbl11.textColor = UIColor.black
+            lbl12.textColor = UIColor.black
+            lbl21.textColor = UIColor.darkGray
+            lbl22.textColor = UIColor.darkGray
+            lbl31.textColor = UIColor.darkGray
+            lbl32.textColor = UIColor.darkGray
+            lbl41.textColor = UIColor.darkGray
+            lbl42.textColor = UIColor.darkGray
+            
+            view1.layer.borderWidth = 2
+            view2.layer.borderWidth = 0
+            view3.layer.borderWidth = 0
+            view4.layer.borderWidth = 0
             break
         case 1:
             img0.tintColor = UIColor.systemGray2
             img1.tintColor = UIColor.black
             img2.tintColor = UIColor.systemGray2
             img3.tintColor = UIColor.systemGray2
+            
+            lbl11.textColor = UIColor.darkGray
+            lbl12.textColor = UIColor.darkGray
+            lbl21.textColor = UIColor.black
+            lbl22.textColor = UIColor.black
+            lbl31.textColor = UIColor.darkGray
+            lbl32.textColor = UIColor.darkGray
+            lbl41.textColor = UIColor.darkGray
+            lbl42.textColor = UIColor.darkGray
+            
+            view1.layer.borderWidth = 0
+            view2.layer.borderWidth = 2
+            view3.layer.borderWidth = 0
+            view4.layer.borderWidth = 0
             break
         case 2:
             img0.tintColor = UIColor.systemGray2
             img1.tintColor = UIColor.systemGray2
             img2.tintColor = UIColor.black
             img3.tintColor = UIColor.systemGray2
+            
+            lbl11.textColor = UIColor.darkGray
+            lbl12.textColor = UIColor.darkGray
+            lbl21.textColor = UIColor.darkGray
+            lbl22.textColor = UIColor.darkGray
+            lbl31.textColor = UIColor.black
+            lbl32.textColor = UIColor.black
+            lbl41.textColor = UIColor.darkGray
+            lbl42.textColor = UIColor.darkGray
+            
+            view1.layer.borderWidth = 0
+            view2.layer.borderWidth = 0
+            view3.layer.borderWidth = 2
+            view4.layer.borderWidth = 0
             break
         default:
             img0.tintColor = UIColor.systemGray2
             img1.tintColor = UIColor.systemGray2
             img2.tintColor = UIColor.systemGray2
             img3.tintColor = UIColor.black
+            
+            lbl11.textColor = UIColor.darkGray
+            lbl12.textColor = UIColor.darkGray
+            lbl21.textColor = UIColor.darkGray
+            lbl22.textColor = UIColor.darkGray
+            lbl31.textColor = UIColor.darkGray
+            lbl32.textColor = UIColor.darkGray
+            lbl41.textColor = UIColor.black
+            lbl42.textColor = UIColor.black
+            
+            view1.layer.borderWidth = 0
+            view2.layer.borderWidth = 0
+            view3.layer.borderWidth = 0
+            view4.layer.borderWidth = 2
             break
         }
     }
