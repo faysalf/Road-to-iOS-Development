@@ -18,4 +18,7 @@
 #Device-Friendly-Design
 #Subscription-Page-Design-Swift
 #Upgrade-Page-Design-Swift
-
+#How-to-update-device-comapatable-constraints-using-swift
+#How-to-give-auto-slide-effects-on-collection-view-using-swift
+#How-to-create-a-checkbox-using-swift
+#How-to-give-auto-bounce-effect-on-a-button-using-swift
