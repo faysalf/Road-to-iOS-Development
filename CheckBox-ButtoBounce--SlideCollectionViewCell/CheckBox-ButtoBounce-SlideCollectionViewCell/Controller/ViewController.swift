@@ -47,10 +47,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setUpCollectionView()
         timeToScroll()
         corenerRadius()
+        submitButton.pulsate()
     }
     
 
@@ -71,19 +71,31 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
     }
     
-    // MARK: submit button bounce
-    @IBAction func btnCancel_click(_ sender: Any) {
-        submitButton.transform = CGAffineTransform(scaleX: 0.50, y: 0.50)
-        UIView.animate(withDuration: 3.0,
-                       delay: 0,
-                       usingSpringWithDamping: 0.3,
-                       initialSpringVelocity: 2.0,
-                       options: .allowUserInteraction,
-                       animations: { [weak self] in
-            self?.submitButton.transform = .identity
-        },
-                       completion: nil)
+    @IBAction func btnCancel_click(_ sender: UIButton) {
+        print("Button Pressed")
     }
+    
+    // MARK: submit button bounce on user interaction
+//    @IBAction func btnCancel_click(_ sender: UIButton) {                  // MARK: On click
+//        submitButton.transform = CGAffineTransform(scaleX: 0.50, y: 0.50)
+//        UIView.animate(withDuration: 3.0,
+//                       delay: 0,
+//                       usingSpringWithDamping: 0.3,
+//                       initialSpringVelocity: 2.0,
+//                       options: .allowUserInteraction,
+//                       animations: { [weak self] in
+//            self?.submitButton.transform = .identity
+//        },
+//                       completion: nil)
+//    }
+    
+    // MARK: Without Click - Button Bouncing
+//    func animateLabels() {
+//        UIView.animate(withDuration: 0.1, delay: 0, options: [.repeat, .autoreverse], animations: {
+//            self.submitButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+//        })
+//    }
+    
     
     // MARK: Auto-slider
     
@@ -94,7 +106,7 @@ class ViewController: UIViewController {
         pageView.numberOfPages = images.count
         pageView.currentPage = 0
         DispatchQueue.main.async {
-            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
         }
     }
     @objc func changeImage() {
@@ -245,4 +257,19 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
     }
 
 }
-
+// MARK: Submit Button Bouncing without user interaction
+extension UIView {
+  func pulsate() {
+        
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+      pulse.duration = 1.0
+        pulse.fromValue = 0.95
+        pulse.toValue = 1.1
+        pulse.autoreverses = true
+        pulse.repeatCount = 1000
+        pulse.initialVelocity = 0.5
+      pulse.damping = 8.2
+        
+        layer.add(pulse, forKey: "pulse")
+    }
+}
