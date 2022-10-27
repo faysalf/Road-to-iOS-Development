@@ -259,16 +259,16 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
 }
 // MARK: Submit Button Bouncing without user interaction
 extension UIView {
-  func pulsate() {
+    func pulsate() {
         
         let pulse = CASpringAnimation(keyPath: "transform.scale")
-      pulse.duration = 1.0
+        pulse.duration = 1.0
         pulse.fromValue = 0.95
         pulse.toValue = 1.1
         pulse.autoreverses = true
         pulse.repeatCount = 1000
         pulse.initialVelocity = 0.5
-      pulse.damping = 8.2
+        pulse.damping = 8.2
         
         layer.add(pulse, forKey: "pulse")
     }
