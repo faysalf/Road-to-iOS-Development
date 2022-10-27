@@ -17,6 +17,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageView: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: Constraints update for relatable devices
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var view1TopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var view2Constraint: NSLayoutConstraint!
+    @IBOutlet weak var view3Constraint: NSLayoutConstraint!
+    @IBOutlet weak var view4Constraint: NSLayoutConstraint!
+    @IBOutlet weak var submitTopConst: NSLayoutConstraint!
+    @IBOutlet weak var submitBottomConst: NSLayoutConstraint!
+    @IBOutlet weak var submitHeightConst: NSLayoutConstraint!
+    
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view3: UIView!
@@ -35,6 +45,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var smallLabel: UILabel!
     @IBOutlet weak var smallLabel2: UILabel!
     @IBOutlet weak var recommendLable: UILabel!
+    @IBOutlet weak var noCommit: UILabel!
     
     let images = [UIImage(named: "a"),
                   UIImage(named: "b"),
@@ -51,6 +62,22 @@ class ViewController: UIViewController {
         timeToScroll()
         corenerRadius()
         submitButton.pulsate()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if view.frame.width <= 380 {
+            view1TopConstraint.constant =  20
+            view2Constraint.constant = 11
+            view3Constraint.constant = 13
+            view4Constraint.constant = 12
+            submitTopConst.constant = 26
+            submitBottomConst.constant = 10
+            submitHeightConst.constant = 45
+            collectionViewHeightConstraint.constant = 200
+        }
+
     }
     
 
@@ -155,6 +182,7 @@ class ViewController: UIViewController {
             view2.layer.borderWidth = 0
             view3.layer.borderWidth = 0
             view4.layer.borderWidth = 0
+            noCommit.textColor = UIColor.darkGray
             break
         case 1:
             img0.tintColor = UIColor.systemGray2
@@ -175,6 +203,7 @@ class ViewController: UIViewController {
             view2.layer.borderWidth = 2
             view3.layer.borderWidth = 0
             view4.layer.borderWidth = 0
+            noCommit.textColor = UIColor.darkGray
             break
         case 2:
             img0.tintColor = UIColor.systemGray2
@@ -195,6 +224,7 @@ class ViewController: UIViewController {
             view2.layer.borderWidth = 0
             view3.layer.borderWidth = 2
             view4.layer.borderWidth = 0
+            noCommit.textColor = UIColor.darkGray
             break
         default:
             img0.tintColor = UIColor.systemGray2
@@ -215,6 +245,7 @@ class ViewController: UIViewController {
             view2.layer.borderWidth = 0
             view3.layer.borderWidth = 0
             view4.layer.borderWidth = 2
+            noCommit.textColor = UIColor.systemBackground
             break
         }
     }
