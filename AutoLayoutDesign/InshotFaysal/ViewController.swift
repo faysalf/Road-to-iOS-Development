@@ -17,16 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var img1: UIImageView!
     @IBOutlet weak var img2: UIImageView!
     @IBOutlet weak var img3: UIImageView!
-    
-    @IBOutlet weak var circleImg1: UIImageView!
-    @IBOutlet weak var circleImg2: UIImageView!
-    @IBOutlet weak var circleImg3: UIImageView!
     @IBOutlet weak var testStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //cornerRadius()
+        cornerRadius()
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,16 +32,13 @@ class ViewController: UIViewController {
         }
     }
     
-//    func cornerRadius() {
-//        view2.layer.cornerRadius = 15
-//        img1.layer.cornerRadius = 10
-//        img2.layer.cornerRadius = 10
-//        img3.layer.cornerRadius = 10
-//        circleImg1.layer.cornerRadius = 0.5 * circleImg1.frame.size.height
-//        circleImg2.layer.cornerRadius = 0.5 * circleImg2.frame.size.height
-//        circleImg3.layer.cornerRadius = 0.5 * circleImg3.frame.size.height
-//
-//    }
+    func cornerRadius() {
+        view2.layer.cornerRadius = 15
+        img1.layer.cornerRadius = 10
+        img2.layer.cornerRadius = 10
+        img3.layer.cornerRadius = 10
+
+    }
 
 
 }
